@@ -1,0 +1,53 @@
+body{
+    /* background-color: black; */
+    background-color: rgb(233, 236, 239);
+
+    padding-top: 105px;
+}
+
+.fixed-top-1 {
+    /* margin-top: 60px; */
+    z-index: 2;
+}
+.fixed-top-2 {
+    /* margin-top: 60px; */
+    margin-top: 67px;
+    z-index: 1;
+}
+.fixed-top-3 {
+    margin-top: 17px;
+    z-index: 1;
+}
+
+#carouselExampleCaptions.carousel.slide {
+    width: 800px; 
+    /* height: 600px; */
+}
+
+#landinginfo{
+    border: 2em;
+    background-color: rgb(23, 68, 125);
+    color: white;
+}
+
+#scrollLink{
+    color: white;
+    padding-right: 80px;
+}
+
+.navbar-brand{
+    font-size: 35px;
+}
+
+#footer{
+    background: rgb(16, 33, 65);
+}
+
+#level1{
+    padding-top: 20px;
+}
+#level2{
+    padding-top: 20px;
+}
+
+

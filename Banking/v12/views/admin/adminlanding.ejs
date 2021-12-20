@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!-- Make site responsive on mobile/tablet -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <title id = "title">Thrifty Bank</title>
+</head>
+<style>
+        body{
+          background: rgb(16, 33, 65);    
+        }
+        
+        .fixed-top-1 {
+            /* margin-top: 60px; */
+            z-index: 2;
+        }
+        .fixed-top-2 {
+            /* margin-top: 60px; */
+            margin-top: 67px;
+            z-index: 1;
+        }
+        .fixed-top-3 {
+            margin-top: 17px;
+            z-index: 1;
+        }
+        
+        #carouselExampleCaptions.carousel.slide {
+            width: 800px; 
+            /* height: 600px; */
+        }
+        
+        #landinginfo{
+            border: 2em;
+            background-color: rgb(23, 68, 125);
+            color: white;
+        }
+        
+        #scrollLink{
+            color: white;
+            padding-right: 80px;
+        }
+        
+        .navbar-brand{
+            font-size: 35px;
+        }
+        
+        #footer{
+            background: rgb(23, 68, 125);
+        }
+        
+        #level1{
+            padding-top: 20px;
+        }
+        #level2{
+            padding-top: 20px;
+        }
+        
+        
+        
+        #bj{
+          background: rgb(16, 33, 65);
+          color: white
+      
+      }
+    </style>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark fixed-top-1" style="background-color: rgb(13, 33, 67);">
+            <div class = "container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="/">
+                  Thrifty
+              </a>
+            </div>
+    </nav>
+
+    <div class="container">
+        <% if(error && error.length > 0) { %>
+          <div class = "alert alert-danger" role = "alert">
+            <%= error %>
+          </div>
+          <% } %>
+        <% if(success && success.length > 0) { %>
+          <div class = "alert alert-success" role = "alert">
+            <%= success %>
+          </div>
+          <% } %>
+      </div>
+
+    <div id = "bj" class="mt-5 jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="text-center display-4 pb-3">Administrator Section</h1>
+            <a class="btn btn-lg btn-block btn-primary" href="/adminview">View all requests</a>
+            <a class="btn btn-lg btn-block btn-success" href="/balance">Load Balance</a>
+            </div>
+        </div>

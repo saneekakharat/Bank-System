@@ -1,0 +1,56 @@
+<% include ../partials/moneytrHeader.ejs  %>
+
+        <div id = "bj" class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-6">Current balance:</h1>
+              <h1 class="display-4"> <%= currentUser.account_balance %></h1>
+              <p class="lead">for the account number <%= currentUser.account_number %></p>
+            </div>
+        </div>
+        <div id = "bj" class="jumbotron jumbotron-fluid col">
+            <div class="container">
+              <h2 class="display-4 text-center">Transfer Money to a Thrifty Bank Account</h2>
+              <p class="lead text-center">Transfer money to another Thrify account just by entering the name and email.</p>
+              <form class = "text-center"action="/moneytransfer/<%= currentUser._id %>?_method=PUT" method="POST">
+                <div class = "container">
+                  <div class="form-group row">
+                    <label for = "name" class="col-sm-2 col-form-label">Name of Receiver</label>
+                    <div class="col-sm-8">
+                      <input type="text" name = "receiver" class="form-control" id="name" placeholder="name">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for = "name" class="col-sm-2 col-form-label">Email of Receiver</label>
+                    <div class="col-sm-8">
+                      <input type="email" name = "receiverEmail" class="form-control" id="email" placeholder="email@gmail.com">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for = "name" class="col-sm-2 col-form-label">TUC (Thrifty Unique Code)</label>
+                    <div class="col-sm-8">
+                      <input type="number" name = "unique" class="form-control"  placeholder="4-digit TUC">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="amount" class="col-sm-2 col-form-label">Amount in ₹</label>
+                    <div class="col-sm-4">
+                      <input type="number" name = "amount" class="form-control" id="amount" placeholder="amount">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-12">
+                      <button type="submit" class="btn btn-success">Transfer Money</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="col-md-12 text-center mb-4"> 
+            <a class = "btn btn-primary mx-auto"href="/moneytransfer1/<%= currentUser._id %>">Transfer Money to a different bank account</a>
+          </div>
+
+    
+
+<% include ../partials/footer.ejs  %>
